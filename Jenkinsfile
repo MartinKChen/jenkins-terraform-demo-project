@@ -10,14 +10,13 @@ pipeline {
 
     stage ("terraform init") {
       steps {
-        sh ('terraform init')
+        sh ('TF_LOG=DEBUG terraform init')
       }
     }
 
     stage ("terraform apply") {
       steps {
-        sh ('ls -ltra')
-        sh ('terraform apply -auto-approve')
+        sh ('TF_LOG=DEBUG terraform apply -auto-approve')
       }
     }
   }
