@@ -20,6 +20,7 @@ pipeline {
         AWS_SECRET_ACCESS_KEY = credentials('aws_secret_access_key')
       }
       steps {
+        sh ('export')
         sh ('terraform apply -auto-approve')
       }
     }
