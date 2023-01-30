@@ -13,13 +13,6 @@ pipeline {
         sh ('terraform init')
       }
     }
-    
-    stage ("terraform plan") {
-      steps {
-        sh ('ls -ltra')
-        sh ('terraform plan')
-      }
-    }
 
     stage ("terraform apply") {
       steps {
