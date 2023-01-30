@@ -16,6 +16,7 @@ pipeline {
 
     stage ("terraform apply") {
       steps {
+        sh ('whoami')
         sh ('TF_LOG=DEBUG terraform apply -auto-approve')
       }
     }
