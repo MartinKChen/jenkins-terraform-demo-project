@@ -21,8 +21,7 @@ pipeline {
       }
       
       steps {
-        sh ('export')
-        sh ('TF_LOG=DEBUG terraform apply -auto-approve')
+        sh ('terraform apply -auto-approve')
       }
     }
   }
