@@ -16,6 +16,7 @@ pipeline {
 
     stage ("terraform apply") {
       steps {
+        sh ('ls -ltra')
         sh ('terraform apply –auto-approve')
       }
     }
